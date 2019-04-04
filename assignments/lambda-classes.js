@@ -53,15 +53,19 @@ class Instructor extends Person {
         graduate(student){
         let randomN = Math.floor(Math.random() * 201) - 100 + student.grade;
         let newGrade = randomN;
-        if (newGrade <= 69) {
-            return `${student.name} has not passed.`
-        } else {
-            return `${student.name} has passed.`
-        }
+            if (newGrade >= 70) {
+                return `${student.name} has passed.`
+            } else if (newGrade <= 69) {
+               return Math.floor(Math.random() * 201) - 100 + newGrade;
+                 } else {
+                return;
+            }
+    
+    }
 
     }
  
-}
+
 
 
 class ProjectManager extends Instructor{
