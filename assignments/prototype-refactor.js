@@ -32,7 +32,8 @@ class GameObject {
 
 class CharacterStats extends GameObject {
 	constructor(stats) {
-		super(stats);
+        super(stats);
+        this.healthPoints = stats.healthPoints;
 	}
 	takeDamage() {
 		return `${this.name} took damage.`;
@@ -40,7 +41,7 @@ class CharacterStats extends GameObject {
 }
 // function CharacterStats() {
 //   GameObject.call(this,stats)
-//    this.healthPoints = stats.healthPoints;
+   
 
 // CharacterStats.prototype.takeDamage = function() {
 
