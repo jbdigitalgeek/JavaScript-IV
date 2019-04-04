@@ -26,26 +26,18 @@ class GameObject {
 	destroy() {
 		return `${this.name} was removed from the game.`;
 	}
-	// GameObject.prototype.destroy = function() {
-	// return `${this.name} was removed from the game.`;
 }
 
 class CharacterStats extends GameObject {
 	constructor(stats) {
-        super(stats);
-        this.healthPoints = stats.healthPoints;
+		super(stats);
+		this.healthPoints = stats.healthPoints;
 	}
 	takeDamage() {
 		return `${this.name} took damage.`;
 	}
 }
-// function CharacterStats() {
-//   GameObject.call(this,stats)
-   
 
-// CharacterStats.prototype.takeDamage = function() {
-
-// };
 class Humanoid extends CharacterStats {
 	constructor(humanAttr) {
 		super(humanAttr);
@@ -57,16 +49,6 @@ class Humanoid extends CharacterStats {
 		return `${this.name} offers a greeting in ${this.language}`;
 	}
 }
-// Humanoid.prototype = Object.create(GameObject.prototype);
-// Humanoid.prototype = Object.create(CharacterStats.prototype);
-
-// function Humanoid(humanAttr) {
-//   CharacterStats.call(this,humanAttr);
-
-// }
-// Humanoid.prototype.greet = function() {
-// 	return `${this.name} offers a greeting in ${this.language}`;
-// };
 
 const mage = new Humanoid({
 	createdAt: new Date(),
@@ -81,6 +63,7 @@ const mage = new Humanoid({
 	weapons: ['Staff of Shamalama'],
 	language: 'Common Tongue',
 });
+console.log(mage.name)
 const swordsman = new Humanoid({
 	createdAt: new Date(),
 	dimensions: {
